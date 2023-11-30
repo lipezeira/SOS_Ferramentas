@@ -2,30 +2,20 @@
 
 declare(strict_types=1);
 
-use SosFerramentas\Controllers\ErroController;
-use SosFerramentas\Controllers\HomeController;
-use SosFerramentas\Controllers\LoginController;
+use SosFerramentas\Core\Router;
 
 require __DIR__ . "/vendor/autoload.php";
 
 const PASTA_VIEW = "./app/Views/";
+const NS_CONTROLLERS = "\\SosFerramentas\\Controllers\\";
 
-$url = $_GET['url'] ?? "/";
+$url = $_GET['url'] ?? "";
 
-switch($url){
-    case "/":
-        $controller = new HomeController();
-        $controller->index();
-        break;
-    case "login":
-        $controller = new LoginController();
-        $controller->login();
-        break;
-    case "cadastro":
-        $controller = new LoginController();
-        $controller->criarconta();
-        break;
-    default:
-        $controller = new ErroController();
-        $controller->erro404();
-}
+
+Router::add('/','HomeController','index');
+Router::add('/login','LoginController','login');
+Router::add('/cadastro','LoginController','criarconta');
+Router::add('__erro','ErroController','erro404');
+
+Router::exec($url);
+

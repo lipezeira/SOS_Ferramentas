@@ -2,7 +2,7 @@
 
 namespace SosFerramentas\Core;
 
-class Controller{
+abstract class Controller{
     
     protected function view(string $arquivo,array $dados=[]){
         extract($dados);
