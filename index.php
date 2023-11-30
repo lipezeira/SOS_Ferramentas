@@ -1,20 +1,31 @@
 <?php
 
 declare(strict_types=1);
+
+use SosFerramentas\Controllers\ErroController;
+use SosFerramentas\Controllers\HomeController;
+use SosFerramentas\Controllers\LoginController;
+
 require __DIR__ . "/vendor/autoload.php";
+
+const PASTA_VIEW = "./app/Views/";
 
 $url = $_GET['url'] ?? "/";
 
 switch($url){
     case "/":
-        echo "Página Inicial";
+        $controller = new HomeController();
+        $controller->index();
         break;
     case "login":
-        echo "Página de login";
+        $controller = new LoginController();
+        $controller->login();
         break;
     case "cadastro":
-        echo "Página de cadastro";
+        $controller = new LoginController();
+        $controller->criarconta();
         break;
     default:
-        echo "404 - Página não encontrada!";
+        $controller = new ErroController();
+        $controller->erro404();
 }
