@@ -17,10 +17,11 @@ class Router{
         $rotas = static::$rotas;
         if( array_key_exists($url,$rotas)){
             [$controller,$metodo] = $rotas[$url];
+            static::carregarController($controller,$metodo);
         }else{
-            [$controller,$metodo] = $rotas['__erro'];
+            static::erro('404');
         }
-        static::carregarController($controller,$metodo);
+        
      }
  
     protected static function carregarController($controller,$metodo){
@@ -28,5 +29,12 @@ class Router{
         $controller = NS_CONTROLLERS . $controller;
         $ctr = new $controller;
         $ctr->$metodo();
+    }
+
+    protected static function erro(string $tipo){
+        $controller = NS_CONTROLLERS. 'ErroController';
+        $ctr = new $controller();
+        $ctr->erro($tipo);
+
     }
 }

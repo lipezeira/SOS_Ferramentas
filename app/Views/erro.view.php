@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Sos Ferramentas</h1>
-    <h2>ERRO 404 - Página não encontrada</h2>
+    <h2></h2>
     
 </body>
 </html>
