@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/SOS/SOS_Ferramentas/public/estilo/style.css">
+    <link rel="stylesheet" href="<?=css('style')?>">
     <title>S.O.S Ferramentas</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
             <ul type="none">
 
                 <div class="logo">
-                    <div class="img"><img src = "imagens/logo fundo.png"></div>
+                    <div class="img"><img src = "http://localhost/SOS/SOS_Ferramentas/public/img/logo.png""></div>
                     <div class="h1">
                         <h1>SOS</h1>
                         <h1>Ferramentas</h1>
@@ -23,7 +23,7 @@
 
                 <div class="links_menu">
                     <div class="usuario">
-                        <div><img src = "imagens/imagemusuario.png" class="img_menu"></div>
+                        <div><img src = "imagens/.png" class="img_menu"></div>
                         <div class="info_menu"><h4>Felipe</h4></div>
                         <div class="info_menu"><h4>felipeMecanico@gmail.com</h4></div>
                     </div>
@@ -299,5 +299,5 @@
         <div class="link_menu"><a href="carrinho.html"><img src="imagenslinks/5.png" class="img_link"></a></div>
     </div>
 </body>
-<script src="script/script.js"></script>
+<script src="http://localhost/SOS/SOS_Ferramentas/public/script/script.js"></script>
 </html>

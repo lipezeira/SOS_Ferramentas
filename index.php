@@ -8,6 +8,16 @@ require __DIR__ . "/vendor/autoload.php";
 require __DIR__ . "/app/config.php";
 require __DIR__ . "/app/rotas.php";
 
+function css(string $arquivo): string{
+    return URL_BASE."public/estilo/{$arquivo}.css";
+}
+
+function componente(string $componente){
+    require PASTA_VIEW."componentes/{$componente}.view.php";
+} 
+
+
+
 $url = $_GET['url'] ?? "";
 
 Router::exec($url);
