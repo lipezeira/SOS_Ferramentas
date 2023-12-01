@@ -26,7 +26,7 @@ class Router{
  
     protected static function carregarController($controller,$metodo){
 
-        $controller = NS_CONTROLLERS . $controller;
+        $controller = NS_CONTROLLERS. $controller;
         if(class_exists($controller)){
             $ctr = new $controller();
             if(method_exists($ctr,$metodo)){
