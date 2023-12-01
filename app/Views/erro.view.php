@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Sos Ferramentas</h1>
-    <h2></h2>
+    <h2><?=$msg?></h2>
     
 </body>
 </html>
