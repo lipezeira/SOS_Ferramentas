@@ -136,13 +136,6 @@
                     </div>
                 </div>
             </div>
-            
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <!-- 4 x espaço-->
             <div class="fotos">
             <div class="card">
                     <img src="<?php echo img('motoserra')?>" class="foto_img">
