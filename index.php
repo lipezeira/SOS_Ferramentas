@@ -12,6 +12,10 @@ function css(string $arquivo): string{
     return URL_BASE."public/estilo/{$arquivo}.css";
 }
 
+function img(string $arquivoimg): string{
+    return URL_BASE."public/img/{$arquivoimg}.png";
+}
+
 function componente(string $componente){
     require PASTA_VIEW."componentes/{$componente}.view.php";
 } 
