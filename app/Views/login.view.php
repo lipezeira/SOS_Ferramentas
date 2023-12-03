@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang = "pt-br">
+        <head>
+            <title>Login SOS Ferramentas</title>
+            <meta charset = "utf-8">
+            <link href = "<?=css('login')?>" rel = "stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            
+                <section class = "areaLogin">
+
+                    <div class = "furadeira"><img src = "<?=img('Furadeira')?>">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+
+                    <div class = "login">
+                        <form method = "GET">
+                            <div><img src = "<?=img('User')?>" class = "imgLogin"></div>
+                           
+                            <div class = "box-user">
+                                <label>Nome de Usuário
+                                <div class="login2">
+                                <i class="fa-regular fa-user"></i>
+                                <input type = "text" name = "nome" placeholder="Nome de Usuário" autofocus>
+                                </div>
+                                </label> 
+                            </div>
+                            
+                            <div class = "box-user">
+                                <label>Senha
+                                <div class=" login2">
+                                <i class="fa-solid fa-lock" style="color: #ffffff;"></i>
+                                <input type = "password" name = "senha" placeholder="Sua senha">
+                                </div>
+                                </label>
+                            </div>
+
+                        <button type = "submit" value = "entrar"><a href = "index.html">Entrar</a></button>
+                        </form>
+                        
+ 
+                    </div>
+                </section>
+                <div class="menumobile">
+                    <div class="link_menu"><a href="index.html"><img src="imagenslinks/1.png" class="img_link"></a></div>
+                    <div class="link_menu"><a href="produtos.html"><img src="imagenslinks/2.png" class="img_link"></a></div>
+                    <div class="link_menu"><a href="Servicos.html"><img src="imagenslinks/3.png" class="img_link"></a></div>
+                    <div class="link_menu"><a href="login.html"><img src="imagenslinks/4.png" class="img_link"></a></div>
+                    <div class="link_menu"><a href="carrinho.html"><img src="imagenslinks/5.png" class="img_link"></a></div>
+                </div>
+            
+        </body>
+    </html>
