@@ -27,11 +27,11 @@
                         <div class="info_menu"><h4>Felipe</h4></div>
                         <div class="info_menu"><h4>felipeMecanico@gmail.com</h4></div>
                     </div>
-                        <div class="link_menu"> <img src="<?php echo img('a')?>" class="img_link"> <li><a href="index.html">Home</a></li> </div>
-                        <div class="link_menu"> <img src="<?php echo img('b')?>" class="img_link"> <li><a href="produtos.html">Produtos</a></li> </div>
-                        <div class="link_menu"> <img src="<?php echo img('c')?>" class="img_link"> <li><a href="Servicos.html">Serviços</a></li> </div>
-                        <div class="link_menu"> <img src="<?php echo img('d')?>" class="img_link"> <li><a href="login.html">Login</a></li> </div>
-                        <div class="link_menu"> <img src="<?php echo img('e')?>" class="img_link"> <li><a href="carrinho.html">Carrinho</a></li> </div>
+                        <div class="link_menu"> <img src="<?php echo img('a')?>" class="img_link"> <li><a href="<?= linkrota('')?>">Home</a></li> </div>
+                        <div class="link_menu"> <img src="<?php echo img('b')?>" class="img_link"> <li><a href="<?= linkrota('produto')?>">Produtos</a></li> </div>
+                        <div class="link_menu"> <img src="<?php echo img('c')?>" class="img_link"> <li><a href="<?= linkrota('servico')?>">Serviços</a></li> </div>
+                        <div class="link_menu"> <img src="<?php echo img('d')?>" class="img_link"> <li><a href="<?= linkrota('login')?>">Login</a></li> </div>
+                        <div class="link_menu"> <img src="<?php echo img('e')?>" class="img_link"> <li><a href="<?= linkrota('carrinho')?>">Carrinho</a></li> </div>
                         
                         
                         <div><a href="" class="create">Create</a></div>
@@ -282,11 +282,11 @@
         </section>
     </main>
     <div class="menumobile">
-        <div class="link_menu"><a href="index.html"><img src="<?php echo img('a')?>" class="img_link"></a></div>
-        <div class="link_menu"><a href="produtos.html"><img src="<?php echo img('b')?>" class="img_link"></a></div>
-        <div class="link_menu"><a href="Servicos.html"><img src="<?php echo img('c')?>" class="img_link"></a></div>
-        <div class="link_menu"><a href="login.html"><img src="<?php echo img('d')?>" class="img_link"></a></div>
-        <div class="link_menu"><a href="carrinho.html"><img src="<?php echo img('e')?>" class="img_link"></a></div>
+        <div class="link_menu"><a href="<?= linkrota('')?>"><img src="<?php echo img('a')?>" class="img_link"></a></div>
+        <div class="link_menu"><a href="<?= linkrota('produto')?>""><img src="<?php echo img('b')?>" class="img_link"></a></div>
+        <div class="link_menu"><a href="<?= linkrota('servico')?>"><img src="<?php echo img('c')?>" class="img_link"></a></div>
+        <div class="link_menu"><a href="<?= linkrota('login')?>"><img src="<?php echo img('d')?>" class="img_link"></a></div>
+        <div class="link_menu"><a href="<?= linkrota('carrinho')?>"><img src="<?php echo img('e')?>" class="img_link"></a></div>
     </div>
 </body>
 <script src="http://localhost/SOS/SOS_Ferramentas/public/script/script.js"></script>
