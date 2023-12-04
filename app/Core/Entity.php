@@ -50,7 +50,7 @@ abstract class Entity{
             return $this->$nomeProp;
         }
     }
-    #arrumar no video 15
+
     public function getProps(){
         return get_object_vars($this);
     }
