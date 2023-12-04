@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url("Imagem/FundoLogin.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -16,6 +13,7 @@ body {
     color: white;
 }
 .areaLogin{
+    background-color:black;
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -210,10 +208,6 @@ button > a{
     .foto_img{
         min-width: 45vw;
         min-height: 48vw;
-    }
-    .areaLogin{
-        flex-direction: column;
-
     }
     form{
         background-color: #1b1927;
