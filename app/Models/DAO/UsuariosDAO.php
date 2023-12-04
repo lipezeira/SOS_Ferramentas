@@ -2,14 +2,18 @@
 
 namespace SosFerramentas\Models\DAO;
 use SosFerramentas\Core\Database;
+use SosFerramentas\Core\DAO;
 use SosFerramentas\Models\Entities\Usuario;
 
-class UsuariosDAO{
+class UsuariosDAO extends DAO{
 
-    public function inserir(Usuario $usuario){
+    protected static string $tabela = "usuario";
+    protected static string $classe = Usuario::class;
 
+    public static function  inserir($usuario){
         $db = new Database();
-        $sql= "INSERT INTO usuario (email,senha) VALUES (?,?)";
+        $tabela = static::$tabela;
+        $sql= "INSERT INTO {$tabela} (email,senha) VALUES (?,?)";
 
         $dados = [ 
             $usuario->email,
@@ -19,23 +23,11 @@ class UsuariosDAO{
         return $db->execute($sql, $dados);
     }
 
-    public function getAll(){
-        $db = new Database;
-        $sql = "SELECT * FROM usuario";
-        $db->execute($sql);
-        return $db->getALL(Usuario::class);
-    }
-
-    public function getById($id){ 
-        $db = new DataBase;
-        $sql = "SELECT * FROM usuario WHERE idUsuario= ?";
-        $db->execute($sql,[$id]);
     
-        return $db->get(Usuario::class);
-    }
-    public function editar(Usuario $usuario){
+    public static function editar($usuario){
         $db = new Database;
-        $sql= "UPDATE usuario SET email = ?, senha = ? WHERE idUsuario = ?"; 
+        $tabela = static::$tabela;
+        $sql= "UPDATE {$tabela} SET email = ?, senha = ? WHERE idUsuario = ?"; 
         $dados = [
             $usuario-> email,
             $usuario-> senha,
@@ -45,9 +37,5 @@ class UsuariosDAO{
         return $db->execute($sql,$dados);
     }
    
-    public function excluir(Usuario $usuario){
-        $db = new Database;
-        $sql = "DELETE FROM usuario Where idUsuario = ?";
-        return $db->execute($sql,[$usuario->idUsuario]);
-    }
+    
 }
