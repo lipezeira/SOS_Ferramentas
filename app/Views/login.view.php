@@ -11,7 +11,7 @@
         </head>
         <body>
             
-                <section class = "areaLogin">
+                <section class = "areaLogin" style ="background:black;">
 
                     <div class = "furadeira"><img src = "<?=img('Furadeira')?>">
                         <span></span>
@@ -22,7 +22,7 @@
                     
 
                     <div class = "login">
-                        <form method = "GET">
+                        <form method = "POST">
                             <div><img src = "<?=img('User')?>" class = "imgLogin"></div>
                            
                             <div class = "box-user">
@@ -50,12 +50,11 @@
                     </div>
                 </section>
                 <div class="menumobile">
-                    <div class="link_menu"><a href="index.html"><img src="imagenslinks/1.png" class="img_link"></a></div>
-                    <div class="link_menu"><a href="produtos.html"><img src="imagenslinks/2.png" class="img_link"></a></div>
-                    <div class="link_menu"><a href="Servicos.html"><img src="imagenslinks/3.png" class="img_link"></a></div>
-                    <div class="link_menu"><a href="login.html"><img src="imagenslinks/4.png" class="img_link"></a></div>
-                    <div class="link_menu"><a href="carrinho.html"><img src="imagenslinks/5.png" class="img_link"></a></div>
-                </div>
-            
+                <div class="link_menu"><a href="<?= linkrota('')?>"><img src="<?php echo img('a')?>" class="img_link"></a></div>
+                <div class="link_menu"><a href="<?= linkrota('produto')?>""><img src="<?php echo img('b')?>" class="img_link"></a></div>
+                <div class="link_menu"><a href="<?= linkrota('servico')?>"><img src="<?php echo img('c')?>" class="img_link"></a></div>
+                <div class="link_menu"><a href="<?= linkrota('login')?>"><img src="<?php echo img('d')?>" class="img_link"></a></div>
+                <div class="link_menu"><a href="<?= linkrota('carrinho')?>"><img src="<?php echo img('e')?>" class="img_link"></a></div>
+            </div>
         </body>
-    </html>
+        </html>

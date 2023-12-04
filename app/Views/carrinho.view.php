@@ -97,9 +97,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                        <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+                        </a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -126,9 +126,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
-                            <i class='bx bx-check-circle'></i>
-                        </button>
+                        <a href="<?=linkrota('alugar')?>" class="confirmar">
+                                <i class='bx bx-check-circle'></i>
+                        </a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -154,9 +154,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                    <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+</a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -182,9 +182,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                    <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+</a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -210,9 +210,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                    <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+</a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -236,7 +236,7 @@
             <br>
             <br>
             <br>
-            <div class="confirmarBox">
+            <!-- <div class="confirmarBox">
                 <div>
                     <h4 class="resumocompra">Resumo Da Compra</h4>
                     <h6 class="subtotal">Sub Total: R$ 17</h6>
@@ -244,14 +244,6 @@
                     <h4 class="total">Total: R$17</h4>
                 </div>
                 <button class="contratarbtn">Contratar</button>
-            </div>
+            </div> -->
         </section>
-        <div class="menumobile">
-            <div class="link_menu"><a href="index.html"><img src="<?=img('a')?>" class="img_link"></a></div>
-            <div class="link_menu"><a href="produtos.html"><img src="<?=img('b')?>" class="img_link"></a></div>
-            <div class="link_menu"><a href="Servicos.html"><img src="<?=img('c')?>" class="img_link"></a></div>
-            <div class="link_menu"><a href="login.html"><img src="<?=img('d')?>" class="img_link"></a></div>
-            <div class="link_menu"><a href="carrinho.html"><img src="<?=img('e')?>" class="img_link"></a></div>
-        </div>
-    </body>
-</html></div></main></body><script src="script/car.js"></script></html>
+        <?php componente('rodape')?>
