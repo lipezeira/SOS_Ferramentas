@@ -5,6 +5,7 @@ namespace SosFerramentas\Controllers;
 use SosFerramentas\Core\Controller;
 use SosFerramentas\Models\DAO\UsuariosDAO;
 use SosFerramentas\Models\Entities\Usuario;
+use SosFerramentas\Core\DAO;
 
 class HomeController extends Controller{
 
@@ -15,8 +16,8 @@ class HomeController extends Controller{
 
     public function teste(){
         $usuario = new Usuario;
-        $usuario->email = "Astrogildo@ifba.edu.br";
-        $usuario->senha =  "Astrogildo122";
+        $usuario->email = "Mario@ifba.edu.br";
+        $usuario->senha =  "Mario333";
 
         UsuariosDAO::inserir( $usuario );
     }
@@ -40,11 +41,11 @@ class HomeController extends Controller{
     }
 
     #Atualizar informações de usuario
+    #nao está funcionando
     public function teste4(){
-        $usuario = UsuariosDAO::getById(19);
-        
-        $usuario->email = "astrogildo_of@ifba.edu.br";
-        $usuario->senha = "astrogildo64";
+        $usuario = UsuariosDAO::getById(4);
+        $usuario->email = "lauanda@gmail.com";
+        $usuario->senha = "lauanda1";
 
         UsuariosDAO::editar($usuario);
 
