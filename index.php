@@ -26,6 +26,7 @@ function linkrota($rota = "")
 }
 
 
+
 $url = $_GET['url'] ?? "";
 
 Router::exec($url);

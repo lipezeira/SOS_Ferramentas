@@ -35,6 +35,7 @@ FOREIGN KEY (produto_id) REFERENCES Produtos (idProdutos)
 CREATE TABLE Usuario (
   idUsuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   email VARCHAR(45),
+  nomeUsuario VARCHAR(45),
   senha VARCHAR(100),
   fkprofissional_id INT,
   fkcliente_id INT,
