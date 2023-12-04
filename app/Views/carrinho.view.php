@@ -97,9 +97,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                        <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+                        </a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -126,9 +126,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
-                            <i class='bx bx-check-circle'></i>
-                        </button>
+                        <a href="<?=linkrota('alugar')?>" class="confirmar">
+                                <i class='bx bx-check-circle'></i>
+                        </a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -154,9 +154,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                    <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+</a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -182,9 +182,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                    <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+</a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>
@@ -210,9 +210,9 @@
                         <button id="increase">+</button>
                     </div>
                     <div class="verifica">
-                        <button class="confirmar">
+                    <a href="<?=linkrota('alugar')?>" class="confirmar">
                             <i class='bx bx-check-circle'></i>
-                        </button>
+</a>
                         <button class="deletar">
                             <i class='bx bx-x-circle'></i>
                         </button>

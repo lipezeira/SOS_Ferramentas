@@ -9,3 +9,4 @@ Router::add('/cadastro','LoginController','criarconta');
 Router::add('/produto','ProdutoController','produto');
 Router::add('/servico','ServicoController','servico');
 Router::add('/carrinho','CarrinhoController','carrinho');
+Router::add('/contratar','AlugarController','alugar');
