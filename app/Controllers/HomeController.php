@@ -21,4 +21,50 @@ class HomeController extends Controller{
         $DAO = new UsuariosDAO();
         $DAO->inserir( $usuario );
     }
+
+    #pesquisa de Todos
+    public function teste2(){
+            $DAO = new UsuariosDAO();
+            $usuario = $DAO->getALL();
+
+            foreach($usuario as $usu){
+                echo $usu->email;
+                echo "<hr>";
+            }
+        }
+
+    #pesquisa individual
+    public function teste3(){
+        $DAO = new UsuariosDAO();
+        $usuario = $DAO->getById(15);
+        echo "<pre>";
+        var_dump($usuario);
+    }
+
+    #Atualizar informações de usuario
+    public function teste4(){
+        $DAO = new UsuariosDAO();
+        $usuario = $DAO->getById(15);
+        
+        $usuario->email = "thiago@ifba.edu.br";
+        $usuario->senha = "thiago123";
+
+        $DAO->editar($usuario);
+
+        echo "<pre>";
+        var_dump($usuario);
+    }
+
+    #deletar informações de usuario
+    public function teste5(){
+        $DAO = new UsuariosDAO();
+        $usuario = $DAO->getById(9);
+        if($usuario){
+            $DAO->excluir($usuario);
+            echo "Usuário Excluído com Sucesso!";
+        }else{
+            echo "Usuário Não Existe!";
+        }
+    }
 }
+
