@@ -42,33 +42,12 @@ class LoginController extends Controller{
 
     public function cadastrarconta()
     {
-              
-        $houveErro = Validator::execute(Usuario::getRegras(),$this->post() );
-        if( $houveErro )
-        {
-            addFormData($this->post());
-            flash(Validator::getListaErros(),'erro');
-            redireciona('criarconta');
-        }
-
-           
-            
-            $usuario = new Usuario($this->post());
-            $usuario->tipo = 1;
-
-        
-
-            if( UsuariosDAO::inserir($usuario) ){
-
-                #Sessions -> É um modo em que tornamos variaveis acessiveis dentro da aplicação em páginas e locais diferentes. Estas variaveis estarão disponiveis enquanto o navegador estiver aberto.  
-                flash("Usuário {$usuario->nome} foi cadastrado com sucesso!");
-
-                redireciona('login');
-
-            }
-
-        
-
+       if($_SERVER["REQUEST_METHOD"] = "POST"){
+        var_dump($_POST);
+       }
+       else{
+        echo "ERRO! Método não permitido";
+       }
 
        
     }

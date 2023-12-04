@@ -17,4 +17,5 @@ Router::add('/cadastro','LoginController','criarconta');
 Router::add('/produto','ProdutoController','produto');
 Router::add('/servico','ServicoController','servico');
 Router::add('/carrinho','CarrinhoController','carrinho');
+Router::add('/cadastrarconta','CarrinhoController','cadastrarconta');
 Router::add('/alugar','AlugarController','alugar');

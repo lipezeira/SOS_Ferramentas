@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url("Imagem/FundoLogin.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -16,7 +13,7 @@ body {
     color: white;
 }
 .areaLogin{
-    background-image: url('http://localhost/SOS_Ferramentas/public/img/FundoLogin.png');
+    background-color:black;
     display: flex;
     width: 100vw;
     height: 100vh;

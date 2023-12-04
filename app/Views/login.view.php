@@ -11,7 +11,7 @@
         </head>
         <body>
             
-                <section class = "areaLogin">
+                <section class = "areaLogin" style ="background:black;">
 
                     <div class = "furadeira"><img src = "<?=img('Furadeira')?>">
                         <span></span>
