@@ -3,7 +3,8 @@
 namespace SosFerramentas\Controllers;
 
 use SosFerramentas\Core\Controller;
-use SosFerramentas\Models\Usuarios;
+use SosFerramentas\Models\DAO\UsuariosDAO;
+use SosFerramentas\Models\Entities\Usuario;
 
 class HomeController extends Controller{
 
@@ -13,7 +14,11 @@ class HomeController extends Controller{
     }
 
     public function teste(){
-        $usuario = new Usuarios();
-        $usuario->inserir(["Pedro@ifba.edu.br","Pedro003"]);
+        $usuario = new Usuario;
+        $usuario->email = "Luan@ifba.edu.br";
+        $usuario->senha =  "Luan000";
+
+        $DAO = new UsuariosDAO();
+        $DAO->inserir( $usuario );
     }
 }

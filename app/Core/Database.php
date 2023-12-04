@@ -7,10 +7,10 @@ class Database{
     protected \PDOStatement $stmt;
 
     public function __construct(){
-        $servidor = "localhost";
-        $banco = "sos_ferramentas";
-        $usuario = "root";
-        $senha = "";
+        $servidor = DB['servidor'];
+        $banco = DB['banco'];
+        $usuario = DB['usuario'];
+        $senha = DB['senha'];
 
         #String de conexão
         $dsn = "mysql:host={$servidor};dbname={$banco}";
