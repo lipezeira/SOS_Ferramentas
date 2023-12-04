@@ -16,6 +16,7 @@ body {
     color: white;
 }
 .areaLogin{
+    background-image: url('http://localhost/SOS_Ferramentas/public/img/FundoLogin.png');
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -210,10 +211,6 @@ button > a{
     .foto_img{
         min-width: 45vw;
         min-height: 48vw;
-    }
-    .areaLogin{
-        flex-direction: column;
-
     }
     form{
         background-color: #1b1927;
