@@ -15,17 +15,16 @@ class HomeController extends Controller{
 
     public function teste(){
         $usuario = new Usuario;
-        $usuario->email = "Luan@ifba.edu.br";
-        $usuario->senha =  "Luan000";
+        $usuario->email = "Astrogildo@ifba.edu.br";
+        $usuario->senha =  "Astrogildo122";
 
-        $DAO = new UsuariosDAO();
-        $DAO->inserir( $usuario );
+        UsuariosDAO::inserir( $usuario );
     }
 
     #pesquisa de Todos
     public function teste2(){
-            $DAO = new UsuariosDAO();
-            $usuario = $DAO->getALL();
+          
+            $usuario = UsuariosDAO::getALL();
 
             foreach($usuario as $usu){
                 echo $usu->email;
@@ -35,21 +34,19 @@ class HomeController extends Controller{
 
     #pesquisa individual
     public function teste3(){
-        $DAO = new UsuariosDAO();
-        $usuario = $DAO->getById(15);
+        $usuario = UsuariosDAO::getById(19);
         echo "<pre>";
         var_dump($usuario);
     }
 
     #Atualizar informações de usuario
     public function teste4(){
-        $DAO = new UsuariosDAO();
-        $usuario = $DAO->getById(15);
+        $usuario = UsuariosDAO::getById(19);
         
-        $usuario->email = "thiago@ifba.edu.br";
-        $usuario->senha = "thiago123";
+        $usuario->email = "astrogildo_of@ifba.edu.br";
+        $usuario->senha = "astrogildo64";
 
-        $DAO->editar($usuario);
+        UsuariosDAO::editar($usuario);
 
         echo "<pre>";
         var_dump($usuario);
@@ -57,14 +54,24 @@ class HomeController extends Controller{
 
     #deletar informações de usuario
     public function teste5(){
-        $DAO = new UsuariosDAO();
-        $usuario = $DAO->getById(9);
+        $usuario = UsuariosDAO::getById(19);
         if($usuario){
-            $DAO->excluir($usuario);
+            UsuariosDAO::excluir($usuario);
             echo "Usuário Excluído com Sucesso!";
         }else{
             echo "Usuário Não Existe!";
         }
+    }
+
+    public function teste6(){
+        $usuario = new Usuario(
+        [
+            'email'=> 'Julia@ifba.edu.br',
+            'senha'=> 'julia1234'
+        ]
+    );
+        echo "<pre>";
+        var_dump($usuario->getProps());
     }
 }
 
