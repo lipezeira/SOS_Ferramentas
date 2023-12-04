@@ -3,7 +3,7 @@ CREATE DATABASE SOS_Ferramentas;
 use SOS_Ferramentas;
 
 CREATE TABLE Profissional(
-idProfissional INT PRIMARY KEY NOT NULL,
+idProfissional INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(45),
 foto VARCHAR(150),
 especialidade VARCHAR(45),
@@ -11,7 +11,7 @@ telefone VARCHAR(45)
 );
 
 CREATE TABLE Produtos(
-idProdutos INT PRIMARY KEY NOT NULL,
+idProdutos INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nomeProduto VARCHAR(45),
 foto VARCHAR(150),
 descricao TEXT,
@@ -23,7 +23,7 @@ FOREIGN KEY (profissional_id) REFERENCES Profissional (idProfissional)
 );
 
 CREATE TABLE Cliente(
-idCliente INT PRIMARY KEY NOT NULL,
+idCliente INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(45),
 foto VARCHAR(150),
 logradouro VARCHAR(45),
@@ -33,7 +33,7 @@ FOREIGN KEY (produto_id) REFERENCES Produtos (idProdutos)
 );
 
 CREATE TABLE Usuario (
-  idUsuario INT PRIMARY KEY NOT NULL,
+  idUsuario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   email VARCHAR(45),
   senha VARCHAR(100),
   fkprofissional_id INT,
