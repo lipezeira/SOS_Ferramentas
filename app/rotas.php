@@ -2,9 +2,9 @@
 
 use SosFerramentas\Core\Router;
 
-Router::add('/','HomeController','index');
-Router::add('/login','LoginController','login');
-Router::add('/teste','LoginController','teste');
+Router::get('/','HomeController','index');
+Router::get('/login','LoginController','login');
+Router::get('/teste','LoginController','teste');
 
 /*Router::add('/teste','HomeController','teste');
 Router::add('/teste2','HomeController','teste2');
@@ -13,9 +13,10 @@ Router::add('/teste4','HomeController','teste4');
 Router::add('/teste5','HomeController','teste5');
 Router::add('/teste6','HomeController','teste6');*/
 
-Router::add('/cadastro','LoginController','criarconta');
-Router::add('/produto','ProdutoController','produto');
-Router::add('/servico','ServicoController','servico');
-Router::add('/carrinho','CarrinhoController','carrinho');
-Router::add('/cadastrarconta','CarrinhoController','cadastrarconta');
-Router::add('/alugar','AlugarController','alugar');
+Router::post('/criarconta','LoginController','criarconta');
+Router::get('/produto','ProdutoController','produto');
+Router::get('/servico','ServicoController','servico');
+Router::get('/carrinho','CarrinhoController','carrinho');
+Router::post('/cadastrarconta','CarrinhoController','cadastrarconta');
+Router::get('/alugar','AlugarController','alugar');
+Router::post('/cadastrarconta','LoginController','cadastrarconta');
