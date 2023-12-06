@@ -42,14 +42,8 @@ class LoginController extends Controller{
 
     public function cadastrarconta()
     {
-       if($_SERVER["REQUEST_METHOD"] = "POST"){
         var_dump($_POST);
-       }
-       else{
-        echo "ERRO! Método não permitido";
-       }
-
-       
+    
     }
 
 }
