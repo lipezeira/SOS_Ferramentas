@@ -28,6 +28,7 @@ function linkrota($rota = "")
 
 
 $url = $_GET['url'] ?? "";
+unset($_GET['url']);
 $metodoHttp = $_SERVER["REQUEST_METHOD"];
 
 Router::exec($url, $metodoHttp);
