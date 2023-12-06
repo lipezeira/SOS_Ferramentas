@@ -42,7 +42,12 @@ class LoginController extends Controller{
 
     public function cadastrarconta()
     {
-        var_dump($_POST);
+        $usuario = new Usuario();
+        $usuario->nome = $this->post('nome');
+        $usuario->senha = $this->post('senha');
+        var_dump($usuario);
+
+        var_dump(UsuariosDAO::inserir($usuario));
     
     }
 
