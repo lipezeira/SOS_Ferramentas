@@ -45,6 +45,7 @@
 
                         <button type = "submit" value = "entrar"><a href = "index.html">Entrar</a></button>
                         </form>
+                        <?=flash()?>
                         
  
                     </div>
