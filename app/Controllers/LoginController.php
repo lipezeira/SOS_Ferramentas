@@ -36,18 +36,24 @@ class LoginController extends Controller{
 
     public function criarconta()
     {
+
         
         $this->view('conta');
     }
 
     public function cadastrarconta()
     {
+        
         $usuario = new Usuario();
         $usuario->nome = $this->post('nome');
         $usuario->senha = $this->post('senha');
+
         var_dump($usuario);
 
-        var_dump(UsuariosDAO::inserir($usuario));
+        if(UsuariosDAO::inserir($usuario)){
+         flash("Usuário {$usuario->nome} foi cadastrado com sucesso!");
+         redireciona('login');
+        }
     
     }
 

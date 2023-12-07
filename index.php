@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+session_start();
+
 use SosFerramentas\Core\Router;
 
 require __DIR__ . "/vendor/autoload.php";
