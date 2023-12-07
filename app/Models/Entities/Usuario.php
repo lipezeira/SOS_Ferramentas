@@ -10,4 +10,12 @@ class Usuario extends Entity{
     public function setSenha($valor){
         $this->senha = password_hash($valor,PASSWORD_DEFAULT);
     }
+
+    public static function getRegras() :array
+    {
+        return [
+            'email' => 'obrigatorio|email',
+            'senha' => 'obrigatorio',
+        ];
+    }
 }

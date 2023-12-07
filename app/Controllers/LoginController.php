@@ -43,6 +43,11 @@ class LoginController extends Controller{
 
     public function cadastrarconta()
     {
+        if(mb_strlen($this->input('nome'))==0){
+            echo "Nome não preenchido";
+            die;
+        }
+        
         if( mb_strlen($this->input('nome'))==0){
             echo "Nome não preenchido";
             die;
